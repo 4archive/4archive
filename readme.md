@@ -39,7 +39,7 @@ Make your own `.env` file, using `.env.example` as your base. If you don't know 
 # Backwords Compatibility for Old Schemas
 When 4archive shut down, it's database was also released the public in a shutdown message I left (You can read the shutdown message below).
 
-This new version of the 4archive code was written before I decided to shut down 4archive. I had full intentions to create a new UI for 4archive, new schemas, and overall make a beautiful product that I could be proud of. Because of this,  **The schemas are different!! You cannot use this code for the old schemas!!!**. In order to achieve backwords compatibility, you must line up the columsn from the old database to this new database. Or just alter the source. It's very clean and easy to modify if you know your way around Laravel.
+This new version of the 4archive code was written before I decided to shut down 4archive. **I had full intentions to create a new UI for 4archive, new schemas, and overall make a beautiful product that I could be proud of. Because of this,  the schemas are different!! You cannot use this code for the old schemas!!!**. In order to achieve backwords compatibility, you must line up the columns from the old database to this new database. Or just alter the source. It's very clean and easy to modify if you know your way around Laravel.
 
 Here's a gist of what is changed in the schemas:
 -  Tables now have foreign keys.
