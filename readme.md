@@ -15,6 +15,7 @@ The backend system is powered by [Lumen](http://lumen.laravel.com), a micro-fram
 - Terms of Service
 - Donation page
 - Automatic tweets
+- Automatic `view_cache` clearing
 - Board lists (The support is there though)
 
 # What this source does come with
