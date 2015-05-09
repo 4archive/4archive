@@ -10,6 +10,16 @@ The backend system is powered by [Lumen](http://lumen.laravel.com), a micro-fram
 
 **No support will be given for setting this up. Please only open issues for real bugs or mistakes I made.**
 
+
+## Initial Setup ##
+`php composer.phar install`
+`php artisan migrate`
+
+To seed fake data into the threads and posts table, run `php artisan db:seed`
+
+Make your own .env file, using .env.example as your base. If you don't know what you're doing, read the Lumen documentation.
+
+
 # What this source doesn't come with
 - E-mail notitifications for takedown requests
 - Terms of Service
