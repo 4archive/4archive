@@ -5,9 +5,9 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 
 class MainController extends BaseController
 {
-	/** Not used. View routes.php **/
-	public function index()
-	{
-		return view('home');
-	}
+    /** Not used. View routes.php **/
+    public function index()
+    {
+        return view('home');
+    }
 }

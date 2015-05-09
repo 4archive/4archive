@@ -7,8 +7,8 @@
  */
 
 return [
-	'nsfw' => ['b', 'd', 'e', 'f', 'gif', 'h', 'hr',
-		'r', 's', 't', 'u', 'wg', 'i', 'ic', 'r9k',
-		's4s', 'hm', 'y', 'hc', 'pol', 'soc'],
-	'disabled' => true
+    'nsfw' => ['b', 'd', 'e', 'f', 'gif', 'h', 'hr',
+        'r', 's', 't', 'u', 'wg', 'i', 'ic', 'r9k',
+        's4s', 'hm', 'y', 'hc', 'pol', 'soc'],
+    'disabled' => true
 ];

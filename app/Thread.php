@@ -6,18 +6,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Thread extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
-	protected $table = "threads";
-	protected $hidden = ['secret'];
+    protected $table = "threads";
+    protected $hidden = ['secret'];
 
-	public function posts()
-	{
-		return $this->hasMany('App\Post', 'thread_id', 'id');
-	}
+    public function posts()
+    {
+        return $this->hasMany('App\Post', 'thread_id', 'id');
+    }
 
-	public function takedown_requests()
-	{
-		return $this->hasMany('App\TakedownRequest', 'thread_id', 'id');
-	}
+    public function takedown_requests()
+    {
+        return $this->hasMany('App\TakedownRequest', 'thread_id', 'id');
+    }
 }

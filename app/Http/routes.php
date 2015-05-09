@@ -14,35 +14,35 @@
 $app->group(['namespace' => '\App\Http\Controllers'], function() use ($app)
 {
 
-	$app->get('/', function()
-	{
-		return view('home');
-	});
-	
-	$app->get('/faq', function()
-	{
-		return view('faq');
-	});
-	
-	$app->get('/donate', function()
-	{
-		return view('donate');
-	});
-	
-	$app->get('/tos', function()
-	{
-		return view('terms');
-	});
-	
-	$app->get('/takedown', ['uses' => 'TakedownController@form']);
-	$app->post('/takedown', ['uses' => 'TakedownController@submit']);
+    $app->get('/', function()
+    {
+        return view('home');
+    });
+    
+    $app->get('/faq', function()
+    {
+        return view('faq');
+    });
+    
+    $app->get('/donate', function()
+    {
+        return view('donate');
+    });
+    
+    $app->get('/tos', function()
+    {
+        return view('terms');
+    });
+    
+    $app->get('/takedown', ['uses' => 'TakedownController@form']);
+    $app->post('/takedown', ['uses' => 'TakedownController@submit']);
 
-	$app->get('/{board}/thread/{thread_id}', ['uses' => 'ThreadController@view']);
+    $app->get('/{board}/thread/{thread_id}', ['uses' => 'ThreadController@view']);
 
-	// Api Routes
-	$app->get('api/threads/latest/{page}/{board}', ['uses' => 'ApiController@latestThreads', 'as' => 'latest_threads_api']);
-	$app->get('api/threads/popular/{page}/{board}', ['uses' => 'ApiController@popularThreads', 'as' => 'popular_threads_api']);
-	$app->get('api/stats', ['uses' => 'ApiController@statistics', 'as' => 'statistics']);
-	$app->post('api/archive', ['uses' => 'ApiController@archive', 'as' => 'archive_api']);
+    // Api Routes
+    $app->get('api/threads/latest/{page}/{board}', ['uses' => 'ApiController@latestThreads', 'as' => 'latest_threads_api']);
+    $app->get('api/threads/popular/{page}/{board}', ['uses' => 'ApiController@popularThreads', 'as' => 'popular_threads_api']);
+    $app->get('api/stats', ['uses' => 'ApiController@statistics', 'as' => 'statistics']);
+    $app->post('api/archive', ['uses' => 'ApiController@archive', 'as' => 'archive_api']);
 
 });

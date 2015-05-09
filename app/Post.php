@@ -6,34 +6,34 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
-	protected $table = "posts";
-	protected $fillable = ["chan_id", "thread_id", "original_image_name", "image_size", "image_width", "image_height", "thumb_width", "thumb_height", "image_url", "imgur_hash", "subject", "name", "tripcode", "capcode", "post_timestamp", "body"];
+    protected $table = "posts";
+    protected $fillable = ["chan_id", "thread_id", "original_image_name", "image_size", "image_width", "image_height", "thumb_width", "thumb_height", "image_url", "imgur_hash", "subject", "name", "tripcode", "capcode", "post_timestamp", "body"];
 
-	public function thread()
-	{
-		return $this->belongsTo('App\Thread', 'id', 'thread_id');
-	}
+    public function thread()
+    {
+        return $this->belongsTo('App\Thread', 'id', 'thread_id');
+    }
 
-	public function getImageSize()
-	{
-		if ($this->image_size > 1024) {
-			$kb = $this->image_size / 1024;
+    public function getImageSize()
+    {
+        if ($this->image_size > 1024) {
+            $kb = $this->image_size / 1024;
 
-			if ($kb > 1024) {
-				$mb = $kb / 1024;
-				if ($mb > 1024) {
-					$gb = $mb / 1024;
-					return $gb . ' GB';
-				}
+            if ($kb > 1024) {
+                $mb = $kb / 1024;
+                if ($mb > 1024) {
+                    $gb = $mb / 1024;
+                    return $gb . ' GB';
+                }
 
-				return $mb . ' MB';
-			}
+                return $mb . ' MB';
+            }
 
-			return $kb . ' KB';
-		}
+            return $kb . ' KB';
+        }
 
-		return $this->image_size . ' B';
-	}
+        return $this->image_size . ' B';
+    }
 }
