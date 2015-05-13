@@ -21,7 +21,6 @@ Make your own `.env` file, using `.env.example` as your base. If you don't know 
 To seed fake data into the threads and posts table, run `php artisan db:seed`
 
 # Known issues
-- Takedown requests are not using the Captcha at all.
 - Board lists is not supported.
 
 # What this source comes with
