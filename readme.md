@@ -34,8 +34,8 @@ To seed fake data into the threads and posts table, run `php artisan db:seed`
 # What this source does not come with
 - Automatic `view_cache` clearing
 - Automatic e-mail notifications for takedown requests
-- Donation page
-- Terms of service page
+- Donation page. The view is there but needs to be filled out with your own message. (donate.blade.php)
+- Terms of service page. Again, the view is there, but you need to fill it out. (terms.blade.php)
 
 # Backwords Compatibility for Old Schemas
 When 4archive shut down, it's database was also released the public in a shutdown message I left (You can read the shutdown message below).

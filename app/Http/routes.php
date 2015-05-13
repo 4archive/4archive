@@ -29,7 +29,7 @@ $app->group(['namespace' => '\App\Http\Controllers'], function() use ($app)
         return view('donate');
     });
     
-    $app->get('/tos', function()
+    $app->get('/terms', function()
     {
         return view('terms');
     });
