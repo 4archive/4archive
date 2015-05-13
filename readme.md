@@ -20,21 +20,22 @@ Make your own `.env` file, using `.env.example` as your base. If you don't know 
 
 To seed fake data into the threads and posts table, run `php artisan db:seed`
 
+# Known issues
+- Takedown requests are not using the Captcha at all.
+- Board lists is not supported.
 
-# What this source doesn't come with
-- E-mail notitifications for takedown requests
-- Terms of Service
-- Donation page
-- Automatic tweets
-- Automatic `view_cache` clearing
-- Board lists (The support is there though)
-
-# What this source does come with
+# What this source comes with
 - Automatic take down requests
 - Full archiving process.
 - Uploading images to Imgur/Imageshack
 - Popular threads listing
 - Latest threads listing
+
+# What this source does not come with
+- Automatic `view_cache` clearing
+- Automatic e-mail notifications for takedown requests
+- Donation page
+- Terms of service page
 
 # Backwords Compatibility for Old Schemas
 When 4archive shut down, it's database was also released the public in a shutdown message I left (You can read the shutdown message below).
