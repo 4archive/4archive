@@ -5,6 +5,6 @@
 
 @section('content')
 <div class="hp-content">
-	Fill this out.	
+    Fill this out.	
 </div>
 @stop

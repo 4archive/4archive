@@ -5,6 +5,6 @@
 
 @section('content')
 <div class="hp-content">
-	Ha! You went to a page that doesn't exist.
+    Ha! You went to a page that doesn't exist.
 </div>
 @stop
