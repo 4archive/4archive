@@ -7,6 +7,7 @@ use Response;
 use DB;
 use \App\TakedownRequest as TakedownRequest;
 use \App\Thread as Thread;
+use \ReCaptcha\ReCaptcha as ReCaptcha;
 
 class TakedownController extends BaseController
 {
@@ -20,6 +21,13 @@ class TakedownController extends BaseController
         $url = trim(Request::input('uri'));
         $reason = trim(Request::input('reason'));
         $info = trim(Request::input('info'));
+        $captcha = trim(Request::input('g-recaptcha-response'));
+
+        $verify = new ReCaptcha(env('RECAPTCHA_PRIVATE'));
+        $resp = $verify->verify($captcha, Request::ip());
+        if (!$resp->isSuccess()) {
+        	return redirect()->back()->withInput()->with('error', 'You entered the captcha incorrectly.');
+        }
 
         if (!$url || !$reason || !$info) {
             return redirect()->back()->withInput()->with('error', 'Please fill in all of the required fields.');
