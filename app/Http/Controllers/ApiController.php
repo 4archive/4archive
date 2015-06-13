@@ -68,7 +68,7 @@ class ApiController extends BaseController
     public function archive()
     {
         $board = Request::input('board');
-        $thread_id = Request::input('thread_id');
+        $thread_id = Request::input('id');
 
         // Validation
         if (!$board || !is_numeric($thread_id)) {
